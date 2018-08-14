@@ -5,9 +5,10 @@
         <group>
             <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/src/java/modelo/Tecnico.java</file>
             <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/web/index.xhtml</file>
+            <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/src/java/dao/TecnicoDao.java</file>
             <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/web/tecnico/novoTecnico.xhtml</file>
-            <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/web/welcomePrimefaces.xhtml</file>
             <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/src/java/dao/Dao.java</file>
+            <file>file:/C:/Users/a120137/Downloads/HelpDesk-20180626T134411Z-001/HelpDesk/src/java/controle/NovoTecnico.java</file>
         </group>
     </open-files>
 </project-private>

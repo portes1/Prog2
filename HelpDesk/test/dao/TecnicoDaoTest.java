@@ -5,7 +5,7 @@
  */
 package dao;
 
-import modelo.Tecnico;
+import modelo.Usuario;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,7 +44,7 @@ public class TecnicoDaoTest {
     @Test
     public void testInserir() {
        TecnicoDao dao = new TecnicoDao();
-       Tecnico tec = new Tecnico("FULANO", "Fulano da Silva", "1234");
+       Usuario tec = new Usuario("FULANO", "Fulano da Silva", "1234");
        dao.inserir(tec);
     }
     

@@ -7,20 +7,37 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
       
     <h:head>
-        <title>Cadastrar novo usuário</title>        
+         <title>Cadastrar novo usuário</title>       
     </h:head>
     
     <h:body>
-      
         <h:form id="formPrincipal">
-         <p:outputLabel id="campoNome" value="Nome: "/>
+        <p:outputLabel id="campoNome" value="Nome: "/>
          <p:inputText value="#{novoTecnico.tecnico.nome}" />
-         
-        </h:form> 
+       <br> </br>
+       <p:outputLabel id="campoLogin" value="Login: "/>
+         <p:inputText value="#{novoTecnico.tecnico.login}" />
+   <br> </br>
+   <h:outputText value="Senha: " />
+        <p:password id="feedback" value="#{novoTecnico.tecnico.senha}" feedback="true" />
+      <br> </br>
+      <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <p:outputLabel value="Tipo: " />
+        <p:selectOneRadio id="Nivel" value="#{novoTecnico.tecnico.ehtecnico}">
+            <f:selectItem itemLabel="Tecnico" itemValue="true" />
+            <f:selectItem itemLabel="Usuario" itemValue="false" />
+        </p:selectOneRadio>
+    </h:panelGrid>
+      <br> </br>
+     <p:commandButton value="OK" class="btn btn-primary" action="#{novoTecnico.inserirTecnico()}" update = "@form" /> 
+    
+       </h:form>
+     
+     
+    
     </h:body>
 </html>

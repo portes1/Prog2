@@ -7,9 +7,11 @@ package controle;
 
 import dao.Dao;
 import java.io.Serializable;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import modelo.Tecnico;
+import javax.faces.context.FacesContext;
+import modelo.Usuario;
 
 /**
  *
@@ -18,12 +20,33 @@ import modelo.Tecnico;
 @ManagedBean (name="novoTecnico")
 @ViewScoped
 public class NovoTecnico implements Serializable {
-    private Tecnico tecnico;
-    private Dao<Tecnico> dao;
+    private Usuario tecnico;
+    private Dao<Usuario> dao;
     
     public NovoTecnico(){
-        tecnico = new Tecnico();
-        dao = new Dao(Tecnico.class);
+        tecnico = new Usuario();
+        dao = new Dao(Usuario.class);
     }
+    
+      public void inserirTecnico(){
+        getDao().inserir(getTecnico());
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage (FacesMessage.SEVERITY_INFO,"Usuário cadastrado", null));
+        setTecnico(new Usuario());
+    }   
+
+    public Usuario getTecnico() {
+        return tecnico;
+    }
+
+    public Dao<Usuario> getDao() {
+        return dao;
+    }
+
+    public void setTecnico(Usuario tecnico) {
+        this.tecnico = tecnico;
+    }
+    
+    
     
 }
