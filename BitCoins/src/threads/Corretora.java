@@ -3,6 +3,11 @@ package threads;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ *
+ * @author Pedro Portes - 120137
+ * @author Thalita Yamatsuka - 120126
+ */
 
 public class Corretora {
     
