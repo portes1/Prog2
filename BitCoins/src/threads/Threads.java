@@ -1,6 +1,11 @@
     
 package threads;
 
+/**
+ *
+ * @author Pedro Portes - 120137
+ * @author Thalita Yamatsuka - 120126
+ */
 
 public class Threads {
 
